@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Karan Memane - Personal Portfolio</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Custom Styles -->
+    <style>
+        /* Apply the Inter font family */
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        /* Simple animation for section fade-in */
+        .fade-in-section {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        .fade-in-section.is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-gray-200 antialiased">
+
+    <!-- Header & Navigation -->
+    <header class="bg-gray-900/80 backdrop-blur-sm sticky top-0 z-50">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold text-white">Karan Memane</a>
+            <div class="hidden md:flex space-x-6">
+                <a href="#about" class="hover:text-cyan-400 transition-colors duration-300">About</a>
+                <a href="#projects" class="hover:text-cyan-400 transition-colors duration-300">Projects</a>
+                <a href="#skills" class="hover:text-cyan-400 transition-colors duration-300">Skills</a>
+                <a href="#experience" class="hover:text-cyan-400 transition-colors duration-300">Experience</a>
+                <a href="#contact" class="hover:text-cyan-400 transition-colors duration-300">Contact</a>
+            </div>
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-button" class="md:hidden text-white focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+            </button>
+        </nav>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden px-6 pb-4">
+            <a href="#about" class="block py-2 hover:text-cyan-400 transition-colors duration-300">About</a>
+            <a href="#projects" class="block py-2 hover:text-cyan-400 transition-colors duration-300">Projects</a>
+            <a href="#skills" class="block py-2 hover:text-cyan-400 transition-colors duration-300">Skills</a>
+            <a href="#experience" class="block py-2 hover:text-cyan-400 transition-colors duration-300">Experience</a>
+            <a href="#contact" class="block py-2 hover:text-cyan-400 transition-colors duration-300">Contact</a>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-6 py-12">
+
+        <!-- Hero Section -->
+        <section id="hero" class="flex flex-col-reverse md:flex-row items-center gap-12 min-h-[70vh] fade-in-section">
+            <div class="md:w-1/2 text-center md:text-left">
+                <h1 class="text-4xl md:text-6xl font-bold text-white leading-tight">
+                    Hi, I’m Karan Memane 👋
+                </h1>
+                <p class="text-xl md:text-2xl text-cyan-400 font-semibold mt-2">Aspiring DevOps Engineer</p>
+                <p class="mt-4 text-gray-400 max-w-lg mx-auto md:mx-0">
+                    A passionate engineer with a solid foundation in cloud computing, Linux systems, and CI/CD workflows. I enjoy building and deploying cloud-based and IoT projects, with a focus on scalability, automation, and streamlining development-to-deployment workflows.
+                </p>
+                <div class="mt-8 flex justify-center md:justify-start gap-4">
+                    <a href="#contact" class="bg-cyan-500 hover:bg-cyan-600 text-white font-bold py-3 px-6 rounded-lg transition-transform transform hover:scale-105 duration-300">Contact Me</a>
+                    <a href="#projects" class="bg-gray-700 hover:bg-gray-600 text-white font-bold py-3 px-6 rounded-lg transition-transform transform hover:scale-105 duration-300">View My Work</a>
+                </div>
+            </div>
+            <div class="md:w-1/2 flex justify-center">
+                <img src="profile_image.jpeg" alt="Karan Memane Portrait" class="rounded-full w-64 h-64 md:w-80 md:h-80 object-cover border-4 border-cyan-500 shadow-lg">
+            </div>
+        </section>
+
+        <!-- About Me Section -->
+        <section id="about" class="py-20 fade-in-section">
+            <h2 class="text-3xl md:text-4xl font-bold text-center text-white mb-12">About Me</h2>
+            <div class="flex flex-col md:flex-row items-center gap-12">
+                <div class="md:w-1/3">
+                    <img src="profile_image.jpeg" alt="About me image" class="rounded-lg shadow-xl w-full">
+                </div>
+                <div class="md:w-2/3 text-lg text-gray-400 space-y-4">
+                    <p>I’m an Aspiring DevOps Engineer pursuing a Bachelor of Business Administration (BBA) in Computer Application at MIT Arts, Commerce & Science College, Pune (2022-2025).</p>
+                    <p>With hands-on experience in cloud computing, DevOps, cybersecurity, IoT, and software testing, I bring a unique mix of technical expertise, leadership, and communication skills.</p>
+                    <ul class="list-disc list-inside space-y-2">
+                        <li>Strong background in public speaking and presenting, making complex ideas simple.</li>
+                        <li>Built innovative projects ranging from IoT parking systems to face recognition systems.</li>
+                    </ul>
+                    <p>My goal is to become a versatile engineer contributing to secure, scalable, and user-friendly technologies.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="py-20 fade-in-section">
+            <h2 class="text-3xl md:text-4xl font-bold text-center text-white mb-12">My Projects</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Project Card 1 -->
+                <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg hover:shadow-cyan-500/20 transition-shadow duration-300 transform hover:-translate-y-2">
+                    <img src="https://placehold.co/600x400/111827/38bdf8?text=Face+Recognition" alt="Face Recognition Attendance System Project" class="w-full h-56 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-white mb-2">Face Recognition Attendance System</h3>
+                        <p class="text-gray-400 mb-4">Developed a face recognition-based attendance system using OpenCV and deep learning models to accurately identify and log attendance.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-cyan-900 text-cyan-300 text-xs font-semibold px-2.5 py-0.5 rounded-full">Python</span>
+                            <span class="bg-cyan-900 text-cyan-300 text-xs font-semibold px-2.5 py-0.5 rounded-full">OpenCV</span>
+                            <span class="bg-cyan-900 text-cyan-300 text-xs font-semibold px-2.5 py-0.5 rounded-full">Deep Learning</span>
+                        </div>
+                        <div class="flex gap-4 mt-4">
+                            <a href="https://github.com/karanmemane" class="text-cyan-400 hover:underline">Source Code</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Project Card 2 -->
+                <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg hover:shadow-cyan-500/20 transition-shadow duration-300 transform hover:-translate-y-2">
+                    <img src="https://placehold.co/600x400/111827/38bdf8?text=IoT+Parking" alt="Parking Space Detection Project" class="w-full h-56 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-white mb-2">Parking Space Detection (IoT)</h3>
+                        <p class="text-gray-400 mb-4">A smart IoT-based parking system using Arduino, NodeMCU, Firebase, and IR sensors to manage parking availability in real-time.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-cyan-900 text-cyan-300 text-xs font-semibold px-2.5 py-0.5 rounded-full">Arduino</span>
+                            <span class="bg-cyan-900 text-cyan-300 text-xs font-semibold px-2.5 py-0.5 rounded-full">NodeMCU</span>
+                            <span class="bg-cyan-900 text-cyan-300 text-xs font-semibold px-2.5 py-0.5 rounded-full">Firebase</span>
+                        </div>
+                         <div class="flex gap-4 mt-4">
+                            <a href="https://github.com/karanmemane" class="text-cyan-400 hover:underline">Source Code</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Project Card 3 -->
+                <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg hover:shadow-cyan-500/20 transition-shadow duration-300 transform hover:-translate-y-2">
+                    <img src="https://placehold.co/600x400/111827/38bdf8?text=Recipe+App" alt="Recipe Management System Project" class="w-full h-56 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-white mb-2">Recipe Management System</h3>
+                        <p class="text-gray-400 mb-4">Built following the full SDLC, designed with UML diagrams and SOLID principles for scalability and maintainability.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-cyan-900 text-cyan-300 text-xs font-semibold px-2.5 py-0.5 rounded-full">Software Engineering</span>
+                            <span class="bg-cyan-900 text-cyan-300 text-xs font-semibold px-2.5 py-0.5 rounded-full">UML</span>
+                            <span class="bg-cyan-900 text-cyan-300 text-xs font-semibold px-2.5 py-0.5 rounded-full">System Design</span>
+                        </div>
+                         <div class="flex gap-4 mt-4">
+                            <a href="https://github.com/karanmemane" class="text-cyan-400 hover:underline">Source Code</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="py-20 fade-in-section">
+            <h2 class="text-3xl md:text-4xl font-bold text-center text-white mb-12">Technical Skills</h2>
+            <div class="max-w-6xl mx-auto px-4 space-y-8">
+                <div>
+                    <h3 class="text-2xl font-semibold text-cyan-400 mb-4 text-center">Cloud & DevOps</h3>
+                    <div class="flex flex-wrap justify-center gap-4">
+                        <span class="bg-gray-700 text-gray-200 text-lg font-medium px-6 py-3 rounded-lg">AWS (EC2, S3, EBS, ELB, RDS, IAM, VPC)</span>
+                        <span class="bg-gray-700 text-gray-200 text-lg font-medium px-6 py-3 rounded-lg">Firebase</span>
+                        <span class="bg-gray-700 text-gray-200 text-lg font-medium px-6 py-3 rounded-lg">Linux</span>
+                        <span class="bg-gray-700 text-gray-200 text-lg font-medium px-6 py-3 rounded-lg">GitHub</span>
+                        <span class="bg-gray-700 text-gray-200 text-lg font-medium px-6 py-3 rounded-lg">Docker</span>
+                    </div>
+                </div>
+                 <div>
+                    <h3 class="text-2xl font-semibold text-cyan-400 mb-4 text-center">Programming & Web</h3>
+                    <div class="flex flex-wrap justify-center gap-4">
+                        <span class="bg-gray-700 text-gray-200 text-lg font-medium px-6 py-3 rounded-lg">Java</span>
+                        <span class="bg-gray-700 text-gray-200 text-lg font-medium px-6 py-3 rounded-lg">Python</span>
+                        <span class="bg-gray-700 text-gray-200 text-lg font-medium px-6 py-3 rounded-lg">HTML5</span>
+                        <span class="bg-gray-700 text-gray-200 text-lg font-medium px-6 py-3 rounded-lg">CSS3</span>
+                    </div>
+                </div>
+                 <div>
+                    <h3 class="text-2xl font-semibold text-cyan-400 mb-4 text-center">Operating Systems & Testing</h3>
+                    <div class="flex flex-wrap justify-center gap-4">
+                        <span class="bg-gray-700 text-gray-200 text-lg font-medium px-6 py-3 rounded-lg">Linux (Ubuntu, Zorin OS, CentOS, Kali)</span>
+                        <span class="bg-gray-700 text-gray-200 text-lg font-medium px-6 py-3 rounded-lg">Windows</span>
+                        <span class="bg-gray-700 text-gray-200 text-lg font-medium px-6 py-3 rounded-lg">Manual Testing</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Experience & Certifications Section -->
+        <section id="experience" class="py-20 fade-in-section">
+            <h2 class="text-3xl md:text-4xl font-bold text-center text-white mb-12">Experience & Certifications</h2>
+            <div class="max-w-4xl mx-auto bg-gray-800 rounded-lg p-8">
+                <div class="mb-8">
+                    <h3 class="text-2xl font-bold text-cyan-400">Event Coordinator, Intelligence Fest 2K24</h3>
+                    <p class="text-gray-400">MIT Arts, Commerce & Science College | Mar. 1, 2024</p>
+                    <p class="mt-2 text-gray-300">Coordinated the event, managing logistics and participant engagement.</p>
+                </div>
+                <div>
+                    <h3 class="text-2xl font-bold text-cyan-400 mb-4">Certifications</h3>
+                    <ul class="list-disc list-inside space-y-2 text-gray-300">
+                        <li><b>Introduction to Linux (LFS101) (Aug 2025):</b> Foundational Linux knowledge from The Linux Foundation.</li>
+                        <li><b>AWS Cloud Practitioner Essentials (Aug 2025):</b> Completed foundational training on AWS cloud concepts, services, and architecture.</li>
+                        <li><b>Artificial Intelligence (Jan 2025):</b> Learned text analysis, image processing, and computer vision techniques.</li>
+                        <li><b>Introduction to Cybersecurity (Feb 2024):</b> Explored cyber best practices, network vulnerabilities, and threat detection.</li>
+                        <li><b>Networking Basics (Jan 2024):</b> Covered application layer services, IPv4, network types, and wireless access.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-20 fade-in-section">
+            <h2 class="text-3xl md:text-4xl font-bold text-center text-white mb-4">Get In Touch</h2>
+            <p class="text-center text-gray-400 max-w-2xl mx-auto mb-12">
+                I'm currently open to new opportunities and collaborations. Feel free to send me an email or connect with me. I'm based in Pune, India.
+            </p>
+            <div class="text-center">
+                <a href="mailto:karanmemane2020@gmail.com" class="bg-cyan-500 hover:bg-cyan-600 text-white font-bold py-4 px-8 rounded-lg transition-transform transform hover:scale-105 duration-300 text-lg inline-block mb-4">
+                    karanmemane2020@gmail.com
+                </a>
+                <p class="text-gray-400 text-lg">Phone: +91-9322400390</p>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800">
+        <div class="container mx-auto px-6 py-8 flex flex-col md:flex-row justify-between items-center">
+            <p class="text-gray-400">&copy; 2024 Karan Memane. All rights reserved.</p>
+            <div class="flex space-x-6 mt-4 md:mt-0">
+                <!-- GitHub Icon -->
+                <a href="https://github.com/karanmemane" class="text-gray-400 hover:text-white transition-colors duration-300">
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.168 6.839 9.49.5.092.682-.217.682-.482 0-.237-.009-.868-.014-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.d35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.031-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.203 2.398.1 2.651.64.7 1.03 1.595 1.03 2.688 0 3.848-2.338 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.001 10.001 0 0022 12c0-5.523-4.477-10-10-10z" clip-rule="evenodd" /></svg>
+                </a>
+                <!-- LinkedIn Icon -->
+                <a href="https://linkedin.com/in/karan-memane" class="text-gray-400 hover:text-white transition-colors duration-300">
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // JavaScript for Mobile Menu
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // JavaScript for fade-in animations on scroll
+        const sections = document.querySelectorAll('.fade-in-section');
+        const options = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('is-visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, options);
+
+        sections.forEach(section => {
+            observer.observe(section);
+        });
+        
+        // Make first section visible on load
+        if (sections.length > 0) {
+            sections[0].classList.add('is-visible');
+        }
+    </script>
+</body>
+</html>
